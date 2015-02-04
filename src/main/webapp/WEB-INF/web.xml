@@ -1,0 +1,46 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>AytoServlet</servlet-name>
+  	<display-name>AytoServlet</display-name>
+  	<description></description>
+  	<servlet-class>open4job.web.AytoServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ConfirmarOpcServlet</servlet-name>
+  	<display-name>ConfirmarOpcServlet</display-name>
+  	<description></description>
+  	<servlet-class>open4job.web.ConfirmarOpcServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>VisualizarOpcServlet</servlet-name>
+  	<display-name>VisualizarOpcServlet</display-name>
+  	<description></description>
+  	<servlet-class>open4job.web.VisualizarOpcServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AytoServlet</servlet-name>
+  	<url-pattern>/AytoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ConfirmarOpcServlet</servlet-name>
+  	<url-pattern>/ConfirmarOpcServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>VisualizarOpcServlet</servlet-name>
+  	<url-pattern>/VisualizarOpcServlet</url-pattern>
+  </servlet-mapping>
+
+<!-- Para tratar el pool de conexiones a la base de datos-->
+<resource-ref>
+ <description>Oracle Datasource example</description>
+ <res-ref-name>jdbc/myoracle</res-ref-name>
+ <res-type>javax.sql.DataSource</res-type>
+ <res-auth>Container</res-auth>
+</resource-ref>
+
+</web-app>
